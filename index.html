@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard de Evolução — Consultoria de Tráfego Pago · Adriana Gomes</title>
+<title>Dashboard de Evolução — Método A.C.O™ · Consultoria de Tráfego Pago · Adriana Gomes</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap');
 :root{--bg:#ffffff;--bg-soft:#f8f9fb;--petrol:#0c2d3f;--petrol-mid:#134a64;--petrol-light:#e8f1f5;--gold:#b8922e;--gold-light:#d4af37;--gold-dark:#8a6d1f;--gold-bg:#fdf8ed;--gold-border:#efe0b5;--text:#1a1a2e;--text2:#4a5568;--text3:#8896a6;--border:#e2e8f0;--border-l:#edf2f7;--green:#0d7e5f;--green-bg:#ecfdf5;--green-bd:#a7f3d0;--yellow:#b8860b;--yellow-bg:#fefce8;--yellow-bd:#fde68a;--red:#c0392b;--red-bg:#fef2f2;--red-bd:#fecaca;--blue:#2563eb;--blue-bg:#eff6ff;--blue-bd:#bfdbfe;--purple:#7c3aed;--purple-bg:#f5f3ff;--purple-bd:#ddd6fe;--r:8px;--rl:12px;--s1:0 1px 3px rgba(0,0,0,.06);--s2:0 4px 12px rgba(0,0,0,.07)}
@@ -11,14 +11,21 @@
 body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
 .page{max-width:960px;margin:0 auto;padding:0 40px 80px}
 html{scroll-behavior:smooth}
-.cover{background:linear-gradient(135deg,#091e2a 0%,var(--petrol) 40%,var(--petrol-mid) 100%);border-radius:0 0 var(--rl) var(--rl);padding:60px 50px 30px;position:relative;overflow:hidden;box-shadow:var(--s2)}
+.cover{background:linear-gradient(135deg,#091e2a 0%,var(--petrol) 40%,var(--petrol-mid) 100%);border-radius:0 0 var(--rl) var(--rl);padding:48px 50px 28px;position:relative;overflow:hidden;box-shadow:var(--s2)}
 .cover::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-light),var(--gold),var(--gold-light),transparent)}
 .cover::after{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(184,146,46,.1) 0%,transparent 70%);border-radius:50%}
-.cover-badge{display:inline-block;background:rgba(184,146,46,.12);border:1px solid rgba(184,146,46,.3);border-radius:20px;padding:5px 16px;font-size:10px;font-weight:700;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1}
-.cover h1{font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:#fff;line-height:1.15;position:relative;z-index:1}
+.cover-top{display:flex;align-items:center;gap:20px;position:relative;z-index:1;margin-bottom:16px}
+.cover-avatar{width:70px;height:70px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.cover-info{flex:1}
+.cover-badge{display:inline-block;background:rgba(184,146,46,.12);border:1px solid rgba(184,146,46,.3);border-radius:20px;padding:5px 16px;font-size:10px;font-weight:700;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;position:relative;z-index:1}
+.cover h1{font-family:'Playfair Display',serif;font-size:32px;font-weight:800;color:#fff;line-height:1.15;position:relative;z-index:1}
 .cover h1 span{background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.cover .subtitle{font-size:14px;color:rgba(255,255,255,.6);position:relative;z-index:1;margin-top:10px}
+.cover .subtitle{font-size:13px;color:rgba(255,255,255,.6);position:relative;z-index:1;margin-top:8px}
 .cover .subtitle strong{color:var(--gold-light)}
+.method-bar{background:rgba(255,255,255,.06);border:1px solid rgba(184,146,46,.2);border-radius:var(--r);padding:14px 20px;margin-top:16px;position:relative;z-index:1;text-align:center}
+.method-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold-light);margin-bottom:2px}
+.method-pillars{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase}
+.method-pillars b{color:var(--gold-light)}
 .tab-bar{display:flex;gap:4px;padding:0;margin:0 0 32px;overflow-x:auto;background:var(--bg-soft);border-radius:0 0 var(--rl) var(--rl);border:1px solid var(--border);border-top:none;-webkit-overflow-scrolling:touch}
 .tab-bar::-webkit-scrollbar{height:0}
 .tab-btn{padding:14px 18px;font-size:12px;font-weight:600;color:var(--text3);background:transparent;border:none;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s}
@@ -45,6 +52,7 @@ html{scroll-behavior:smooth}
 .callout.info{background:var(--blue-bg);border:1px solid var(--blue-bd)}
 .callout.warn{background:var(--yellow-bg);border:1px solid var(--yellow-bd)}
 .callout.ok{background:var(--green-bg);border:1px solid var(--green-bd)}
+.callout.danger{background:var(--red-bg);border:1px solid var(--red-bd)}
 .callout-ico{font-size:18px;flex-shrink:0}
 .callout-txt{font-size:13px;color:var(--text2);line-height:1.6}
 .callout-txt strong{color:var(--petrol)}
@@ -86,6 +94,7 @@ html{scroll-behavior:smooth}
 .ctag.done{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd)}
 .ctag.pending{background:var(--yellow-bg);color:var(--gold-dark);border:1px solid var(--yellow-bd)}
 .ctag.planned{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd)}
+.ctag.checkin{background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple-bd);cursor:pointer}
 .camp-box{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:14px;box-shadow:var(--s1)}
 .camp-box.hl{border-color:var(--gold-border);box-shadow:0 4px 16px rgba(184,146,46,.08)}
 .camp-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
@@ -110,16 +119,17 @@ html{scroll-behavior:smooth}
 .cre-block.dor{background:var(--red-bg);border-color:var(--red-bd)}
 .cre-block.ben{background:var(--green-bg);border-color:var(--green-bd)}
 .cre-block.eng{background:var(--blue-bg);border-color:var(--blue-bd)}
+.cre-block.cond{background:var(--yellow-bg);border-color:var(--yellow-bd)}
 .cre-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .cre-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.cre-block.dor .cre-dot{background:var(--red)}.cre-block.ben .cre-dot{background:var(--green)}.cre-block.eng .cre-dot{background:var(--blue)}
+.cre-block.dor .cre-dot{background:var(--red)}.cre-block.ben .cre-dot{background:var(--green)}.cre-block.eng .cre-dot{background:var(--blue)}.cre-block.cond .cre-dot{background:var(--yellow)}
 .cre-head h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--petrol)}
 .cre-item{background:rgba(255,255,255,.8);border-radius:var(--r);padding:18px;margin-bottom:12px;border:1px solid var(--border-l)}
 .cre-item:last-child{margin-bottom:0}
 .cre-item h4{font-size:14px;font-weight:600;color:var(--petrol);margin-bottom:3px}
 .cre-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px}
 .copy-txt{font-size:13px;color:var(--text2);line-height:1.7;padding:14px;background:#fff;border-radius:6px;border-left:3px solid var(--border);margin-top:8px;box-shadow:var(--s1)}
-.cre-block.dor .copy-txt{border-left-color:var(--red)}.cre-block.ben .copy-txt{border-left-color:var(--green)}.cre-block.eng .copy-txt{border-left-color:var(--blue)}
+.cre-block.dor .copy-txt{border-left-color:var(--red)}.cre-block.ben .copy-txt{border-left-color:var(--green)}.cre-block.eng .copy-txt{border-left-color:var(--blue)}.cre-block.cond .copy-txt{border-left-color:var(--yellow)}
 .pd-card{border-radius:var(--r);padding:22px;border:1px solid;box-shadow:var(--s1)}
 .pd-card.pain{background:var(--red-bg);border-color:var(--red-bd)}.pd-card.desire{background:var(--green-bg);border-color:var(--green-bd)}
 .pd-card h3{font-size:13px;font-weight:700;margin-bottom:14px}
@@ -132,7 +142,7 @@ html{scroll-behavior:smooth}
 .res-card h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold-dark);margin-bottom:12px}
 .res-card ul{list-style:none;padding:0}
 .res-card li{font-size:12px;color:var(--text2);padding:4px 0 4px 16px;line-height:1.5;position:relative}
-.res-card li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:11px}
+.res-card li::before{content:'\2192';position:absolute;left:0;color:var(--gold);font-size:11px}
 .roi-card{background:#fff;border-radius:var(--r);padding:22px;border:1px solid var(--border);text-align:center;box-shadow:var(--s1)}
 .roi-card.opt{border-color:var(--green-bd)}.roi-card.real{border-color:var(--gold-border);box-shadow:0 4px 16px rgba(184,146,46,.08)}.roi-card.pess{border-color:var(--red-bd)}
 .roi-sc{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
@@ -166,66 +176,119 @@ html{scroll-behavior:smooth}
 .insight-emoji{font-size:22px;margin-bottom:8px}
 .insight h4{font-size:13px;font-weight:700;color:var(--petrol);margin-bottom:6px}
 .insight p{font-size:12px;color:var(--text2);line-height:1.5}
+.aco-flow{display:flex;align-items:center;gap:0;margin:20px 0}
+.aco-step{flex:1;text-align:center;padding:18px 10px;border:1px solid var(--border);background:var(--bg-soft)}
+.aco-step:first-child{border-radius:var(--r) 0 0 var(--r)}
+.aco-step:last-child{border-radius:0 var(--r) var(--r) 0}
+.aco-step.current{background:var(--gold-bg);border-color:var(--gold-border);box-shadow:0 0 12px rgba(184,146,46,.15)}
+.aco-step .aco-letter{font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:var(--petrol)}
+.aco-step.current .aco-letter{color:var(--gold)}
+.aco-step .aco-word{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-top:2px}
+.aco-step.current .aco-word{color:var(--gold-dark)}
+.aco-arrow{width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:10px solid var(--gold);flex-shrink:0;margin:0 -1px;z-index:1;opacity:.6}
+.alert-box{border-radius:var(--r);padding:16px 20px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;background:var(--red-bg);border:1px solid var(--red-bd)}
+.alert-box .alert-ico{font-size:16px;flex-shrink:0}
+.alert-box .alert-txt{font-size:13px;color:var(--red);font-weight:600;line-height:1.5}
+.edit-field{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:'Inter',sans-serif;font-size:13px;color:var(--text);background:#fff;resize:vertical;min-height:40px;transition:border-color .2s}
+.edit-field:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,146,46,.1)}
+.edit-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold-dark);margin-bottom:6px}
+.next-step-box{background:linear-gradient(135deg,var(--petrol),var(--petrol-mid));border-radius:var(--r);padding:24px;margin-top:20px;box-shadow:var(--s2)}
+.next-step-box h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold-light);margin-bottom:8px}
+.next-step-box .ns-content{color:rgba(255,255,255,.8);font-size:14px;line-height:1.6}
+.next-step-box textarea{width:100%;padding:12px;border:1px solid rgba(184,146,46,.3);border-radius:6px;background:rgba(255,255,255,.08);color:#fff;font-family:'Inter',sans-serif;font-size:13px;resize:vertical;min-height:60px}
+.next-step-box textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
 .footer{text-align:center;padding:40px 0 20px;font-size:11px;color:var(--text3)}
 .footer .brand{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--petrol);margin-bottom:4px}
 .footer .brand span{color:var(--gold)}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold-dark),var(--gold),var(--gold-dark),transparent);margin:40px 0;opacity:.3}
 @media(max-width:768px){
-.page{padding:0 14px 60px}.cover{padding:36px 20px 20px;border-radius:0 0 var(--r) var(--r)}.cover h1{font-size:24px}.tab-bar{gap:0}.tab-btn{padding:12px 14px;font-size:11px}.grid2,.grid3,.insight-grid{grid-template-columns:1fr!important}.script-step{flex-direction:column;gap:4px}.script-time{min-width:auto}.adset{grid-template-columns:auto 1fr}.sec-head h2{font-size:18px}.ctable{font-size:10px}.ctable th,.ctable td{padding:6px 5px}
+.page{padding:0 14px 60px}.cover{padding:30px 18px 20px}.cover h1{font-size:24px}.cover-avatar{width:54px;height:54px}.tab-bar{gap:0}.tab-btn{padding:12px 14px;font-size:11px}.grid2,.grid3,.insight-grid{grid-template-columns:1fr!important}.script-step{flex-direction:column;gap:4px}.script-time{min-width:auto}.adset{grid-template-columns:auto 1fr}.sec-head h2{font-size:18px}.ctable{font-size:10px}.ctable th,.ctable td{padding:6px 5px}.aco-step .aco-letter{font-size:20px}.method-name{font-size:15px}
 }
 @media print{.tab-bar{display:none!important}.tab-content{display:block!important}.page{padding:20px}}
 </style>
 </head>
 <body>
 <div class="page">
+
+<!-- ═══════ COVER ═══════ -->
 <div class="cover">
-<div class="cover-badge">📊 Documento Estratégico</div>
-<h1>Dashboard de <span>Evolução</span><br>Consultoria de Tráfego Pago</h1>
-<p class="subtitle"><strong>Adriana Gomes</strong> — Especialista em Planos de Saúde · Atualizado em Abril 2026</p>
+<div class="cover-top">
+<img class="cover-avatar" src="https://instagram.fgig1-1.fna.fbcdn.net/v/t51.2885-19/480344129_1054389636202073_6498920610498498498_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=instagram.fgig1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2QFq1BYzxXLIr-qFzJV6NJOIVwqsDZBzIEk0Tol5DInvSsVfZlDMRxQUq1d23bw&_nc_ohc=BtCCJl89aLsQ7kNvwGIVDtv&_nc_gid=EvDY_SPj9gENJ9DjJMf1ag&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYH85WjVlORGcJwqQCcL-JqLKfBbfBf8dPSawbSjqSjOBQ&oe=6802AC8A" alt="Adriana Gomes" onerror="this.style.display='none'">
+<div class="cover-info">
+<div class="cover-badge">Consultoria Estratégica de Tráfego</div>
+<h1>Dashboard de <span>Evolução</span><br>Método <span>A.C.O</span>™</h1>
+<p class="subtitle"><strong>Adriana Gomes</strong> — Especialista em Planos de Saúde · Abril 2026</p>
+</div>
+</div>
+<div class="method-bar">
+<div class="method-name">Atrair certo. Converter melhor. Vender com consistência.</div>
+<div class="method-pillars"><b>A</b>trair · <b>C</b>onverter · <b>O</b>timizar</div>
+</div>
 </div>
 
+<!-- ═══════ TABS ═══════ -->
 <div class="tab-bar">
 <button class="tab-btn active" onclick="switchTab('visao',this)">Visão Geral</button>
+<button class="tab-btn" onclick="switchTab('estrategia',this)">Estratégia</button>
 <button class="tab-btn" onclick="switchTab('fase1',this)">Fase 1 <span class="t-check">✓</span></button>
-<button class="tab-btn" onclick="switchTab('fase2',this)">Fase 2 <span class="t-dot"></span></button>
+<button class="tab-btn" onclick="switchTab('fase2',this)">Fase 2 <span class="t-check">✓</span></button>
 <button class="tab-btn" onclick="switchTab('fase3',this)">Fase 3</button>
 <button class="tab-btn" onclick="switchTab('fase4',this)">Fase 4</button>
 <button class="tab-btn" onclick="switchTab('fase5',this)">Fase 5</button>
-<button class="tab-btn" onclick="switchTab('estrategia',this)">Estratégia</button>
-<button class="tab-btn" onclick="switchTab('planilha',this)">📋 Planilha</button>
+<button class="tab-btn" onclick="switchTab('analise',this)">📊 Análise <span class="t-dot"></span></button>
+<button class="tab-btn" onclick="switchTab('otimizacao',this)">Otimização</button>
+<button class="tab-btn" onclick="switchTab('planilha',this)">📋 Planilha Leads</button>
+<button class="tab-btn" onclick="switchTab('diario',this)">📅 Diário</button>
 </div>
 
-<!-- TAB VISÃO GERAL -->
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: VISÃO GERAL                       -->
+<!-- ═══════════════════════════════════════ -->
 <div class="tab-content active" id="tab-visao">
-<div class="sec"><div class="sec-head"><div class="sec-ico">👤</div><h2>Visão Geral</h2></div>
+
+<div class="sec"><div class="sec-head"><div class="sec-ico">🧠</div><h2>Método A.C.O™</h2></div>
+<p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px">O <strong style="color:var(--petrol)">Método A.C.O™</strong> foi desenvolvido para ajudar a <strong style="color:var(--petrol)">atrair</strong> as pessoas certas, <strong style="color:var(--petrol)">converter</strong> com estratégia e <strong style="color:var(--petrol)">otimizar</strong> campanhas com base em dados, transformando tráfego em vendas de forma consistente.</p>
+<div class="aco-flow">
+<div class="aco-step current"><div class="aco-letter">A</div><div class="aco-word">Atrair</div></div>
+<div class="aco-arrow"></div>
+<div class="aco-step"><div class="aco-letter">C</div><div class="aco-word">Converter</div></div>
+<div class="aco-arrow"></div>
+<div class="aco-step"><div class="aco-letter">O</div><div class="aco-word">Otimizar</div></div>
+</div>
+</div>
+
+<div class="sec"><div class="sec-head"><div class="sec-ico">👤</div><h2>Perfil do Projeto</h2></div>
 <div class="grid2">
 <div class="card"><div class="card-label">Cliente</div><div class="card-val">Adriana Gomes</div><div class="card-sub">@agsegurosesaude · Especialista em Planos de Saúde</div></div>
 <div class="card"><div class="card-label">Nicho</div><div class="card-val">Consultoria de Plano de Saúde</div><div class="card-sub">Planos empresariais (CNPJ) + adesão · Rio de Janeiro</div></div>
 <div class="card"><div class="card-label">Público-alvo</div><div class="card-val">Empresários e donos de PMEs</div><div class="card-sub">MEI, LTDA, PJ · 24-43 anos · RJ e região</div></div>
 <div class="card"><div class="card-label">Objetivo</div><div class="card-val">Gerar leads qualificados via tráfego</div><div class="card-sub">Campanhas → WhatsApp → Vendas</div></div>
-<div class="card"><div class="card-label">Operadoras</div><div class="card-val">Amil · Bradesco · SulAmérica · Supermed</div><div class="card-sub">Comissão: ~180% da mensalidade (empresarial)</div></div>
+<div class="card"><div class="card-label">Operadoras</div><div class="card-val">Amil · Bradesco · SulAmérica · Supermed</div><div class="card-sub">Comissão média: R$ 1.800 a R$ 2.000 por plano</div></div>
 <div class="card"><div class="card-label">Investimento</div><div class="card-val">R$ 1.000/mês (R$ 30/dia)</div><div class="card-sub">Meta: 10 planos/mês</div></div>
 </div>
-<div class="status-bar"><div class="status-dot"></div><div><div class="status-txt">🟡 Fase 2 — Estruturando</div><div class="status-sub">Posicionamento ajustado, criativos em produção, campanhas ainda não ativas</div></div></div>
-<div class="prog-bar"><div class="prog-label"><span>Progresso geral</span><span>35%</span></div><div class="prog-track"><div class="prog-fill" style="width:35%"></div></div></div>
+<div class="status-bar"><div class="status-dot"></div><div><div class="status-txt">🚀 Gerenciador configurado — pronta para subir a 1ª campanha</div><div class="status-sub">Posicionamento, criativos e gerenciador prontos. Próximo passo: publicar campanha.</div></div></div>
+<div class="prog-bar"><div class="prog-label"><span>Progresso geral</span><span>40%</span></div><div class="prog-track"><div class="prog-fill" style="width:40%"></div></div></div>
 </div>
+
 <div class="sec"><div class="sec-head"><div class="sec-ico">📋</div><h2>Entregáveis da Consultoria</h2></div>
 <div class="callout gold"><div class="callout-ico">📆</div><div class="callout-txt"><strong>Prazo:</strong> 3 meses — Início 03/03/2026 · Término 04/06/2026</div></div>
 <div class="grid3">
 <div class="card" style="text-align:center"><div class="card-label">Sessão de Diagnóstico</div><div class="card-val" style="font-size:26px">1h</div><div class="card-sub">Análise do cenário e plano de ação</div><div style="margin-top:8px"><span style="display:inline-block;background:var(--green-bg);color:var(--green);font-size:9px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase">✓ Realizada</span></div></div>
-<div class="card" style="text-align:center"><div class="card-label">Encontros Quinzenais</div><div class="card-val" style="font-size:26px">6 × 1h</div><div class="card-sub">Acompanhamento ao longo dos 3 meses</div><div style="margin-top:8px"><span style="display:inline-block;background:var(--gold);color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase">Em andamento</span></div></div>
+<div class="card" style="text-align:center"><div class="card-label">Encontros Quinzenais</div><div class="card-val" style="font-size:26px">6 × 1h</div><div class="card-sub">Quintas-feiras às 14h</div><div style="margin-top:8px"><span style="display:inline-block;background:var(--gold);color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase">2/6 realizados</span></div></div>
 <div class="card" style="text-align:center"><div class="card-label">Suporte WhatsApp</div><div class="card-val" style="font-size:26px">Contínuo</div><div class="card-sub">Horário comercial — dúvidas e validações</div><div style="margin-top:8px"><span style="display:inline-block;background:var(--gold);color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase">Ativo</span></div></div>
 </div></div>
-<div class="sec"><div class="sec-head"><div class="sec-ico">📞</div><h2>Acompanhamento por Call</h2></div>
-<table class="ctable"><thead><tr><th>Data</th><th>O que foi ensinado</th><th>Aplicado</th><th>Status</th></tr></thead><tbody>
-<tr><td><strong>Diagnóstico</strong><br>03/Mar · Ter 14h</td><td>Diagnóstico, pesquisa concorrentes, Ad Library, público CNPJ</td><td>Análise de perfil, definição de público</td><td><span class="ctag done">Realizada</span></td></tr>
-<tr><td><strong>Encontro 01</strong><br>19/Mar · Qui 14h</td><td>Estratégia por hospital, criativo como driver, segmentação regional, R$30/dia, engajamento</td><td>Abordagem hospital + região, faixa 24-43</td><td><span class="ctag done">Realizada</span></td></tr>
-<tr><td><strong>Encontro 02</strong><br>16/Abr · Qui 14h</td><td>Posicionamento perfil, autoridade, posts fixados, revisão criativos</td><td>Bio ajustada, criativos em produção</td><td><span class="ctag done">Realizada</span></td></tr>
-<tr><td><strong>Encontro 03</strong><br>30/Abr · Qui 14h</td><td>Config Gerenciador, CBO, upload criativos, mensagem automática</td><td>—</td><td><span class="ctag pending">Próximo</span></td></tr>
-<tr><td><strong>Encontro 04</strong><br>14/Mai · Qui 14h</td><td>Leitura de métricas, primeiros resultados</td><td>—</td><td><span class="ctag planned">Planejada</span></td></tr>
-<tr><td><strong>Encontro 05</strong><br>28/Mai · Qui 14h</td><td>Otimização, testes A/B, escala</td><td>—</td><td><span class="ctag planned">Planejada</span></td></tr>
-<tr><td><strong>Encontro 06</strong><br>04/Jun · Qui 14h</td><td>Escala, remarketing, Lookalike, autonomia · Fechamento</td><td>—</td><td><span class="ctag planned">Planejada</span></td></tr>
+
+<div class="sec"><div class="sec-head"><div class="sec-ico">📞</div><h2>Cronograma de Encontros</h2></div>
+<table class="ctable"><thead><tr><th>Sessão</th><th>Data</th><th>Tema</th><th>Status</th></tr></thead><tbody>
+<tr><td><strong>Diagnóstico</strong></td><td>03/Mar · Ter 14h</td><td>Diagnóstico, pesquisa concorrentes, Ad Library, público CNPJ</td><td><span class="ctag done">Realizada</span></td></tr>
+<tr><td><strong>Encontro 01</strong></td><td>19/Mar · Qui 14h</td><td>Estratégia por hospital, criativo como driver, segmentação regional, R$30/dia</td><td><span class="ctag done">Realizada</span></td></tr>
+<tr style="background:var(--purple-bg)"><td><strong>Encontro 02</strong></td><td>16/Abr · Qui 14h</td><td>Posicionamento, autoridade, posts fixados, revisão criativos, <strong>configuração do Gerenciador de Anúncios</strong></td><td><span class="ctag checkin" onclick="this.textContent=this.textContent==='✓ Check-in feito'?'Fazer check-in':'✓ Check-in feito';this.classList.toggle('done');this.classList.toggle('checkin')">Fazer check-in</span></td></tr>
+<tr><td><strong>Encontro 03</strong></td><td>30/Abr · Qui 14h</td><td>Leitura de métricas, primeiros resultados, análise de criativos</td><td><span class="ctag pending">Próximo</span></td></tr>
+<tr><td><strong>Encontro 04</strong></td><td>14/Mai · Qui 14h</td><td>Otimização de campanhas, testes A/B, ajuste de públicos</td><td><span class="ctag planned">Planejada</span></td></tr>
+<tr><td><strong>Encontro 05</strong></td><td>28/Mai · Qui 14h</td><td>Otimização avançada, novos criativos, ajuste de orçamento</td><td><span class="ctag planned">Planejada</span></td></tr>
+<tr><td><strong>Encontro 06</strong></td><td>04/Jun · Qui 14h</td><td>Consolidação, autonomia, documentação do processo · <strong>Fechamento</strong></td><td><span class="ctag planned">Planejada</span></td></tr>
 </tbody></table></div>
+
 <div class="sec"><div class="sec-head"><div class="sec-ico">📊</div><h2>Métricas</h2></div>
 <div class="callout info"><div class="callout-ico">💡</div><div class="callout-txt"><strong>Para que servem?</strong> São os números que vamos acompanhar juntas. Passe o mouse sobre as siglas para ver a explicação.</div></div>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
@@ -236,9 +299,64 @@ html{scroll-behavior:smooth}
 <div class="met-card"><div class="met-label"><span class="term">CPL<span class="tip">Custo por Lead — custo de cada conversa no WhatsApp.</span></span></div><div class="met-val">Aguardando</div><div class="met-target">Meta: R$ 20-35</div></div>
 </div>
 <p style="font-size:12px;color:var(--text3);text-align:center;margin-top:12px;padding:10px;background:var(--bg-soft);border-radius:var(--r)">⏳ Preenchido quando as campanhas forem ativadas.</p>
-</div></div>
+</div>
 
-<!-- TAB FASE 1 -->
+<div class="sec"><div class="sec-head"><div class="sec-ico">💰</div><h2>Projeção para 10 Contratos/Mês</h2></div>
+<div class="callout gold"><div class="callout-ico">🎯</div><div class="callout-txt"><strong>Meta:</strong> Fechar 10 planos empresariais por mês com R$ 1.000 de investimento. Comissão média: R$ 1.800 a R$ 2.000 por plano.</div></div>
+<div class="grid3">
+<div class="roi-card pess"><div class="roi-sc">Cenário Conservador</div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">10%</span></div><div class="roi-row"><span class="roi-lbl">Leads necessários</span><span class="roi-val">100</span></div><div class="roi-row"><span class="roi-lbl">CPL máximo</span><span class="roi-val">R$ 10</span></div><div class="roi-row"><span class="roi-lbl">CPC estimado</span><span class="roi-val">R$ 0,80</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Faturamento (10 planos)</div><div class="roi-amt">R$ 18.000</div></div></div>
+<div class="roi-card real"><div class="roi-sc">Cenário Realista</div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">15%</span></div><div class="roi-row"><span class="roi-lbl">Leads necessários</span><span class="roi-val">67</span></div><div class="roi-row"><span class="roi-lbl">CPL máximo</span><span class="roi-val">R$ 15</span></div><div class="roi-row"><span class="roi-lbl">CPC estimado</span><span class="roi-val">R$ 1,00</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Faturamento (10 planos)</div><div class="roi-amt">R$ 19.000</div></div></div>
+<div class="roi-card opt"><div class="roi-sc">Cenário Otimista</div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">25%</span></div><div class="roi-row"><span class="roi-lbl">Leads necessários</span><span class="roi-val">40</span></div><div class="roi-row"><span class="roi-lbl">CPL máximo</span><span class="roi-val">R$ 25</span></div><div class="roi-row"><span class="roi-lbl">CPC estimado</span><span class="roi-val">R$ 1,50</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Faturamento (10 planos)</div><div class="roi-amt">R$ 20.000</div></div></div>
+</div>
+<div class="callout ok"><div class="callout-ico">🏆</div><div class="callout-txt"><strong>ROI em todos os cenários:</strong> Investimento de R$ 1.000 → Faturamento de R$ 18.000 a R$ 20.000 = <strong>ROI de +1.700% a +1.900%</strong>. O foco é otimizar a conversão no WhatsApp para chegar nos 10 contratos.</div></div>
+</div>
+
+<div class="sec"><div class="sec-head"><div class="sec-ico">⚠️</div><h2>Alertas Importantes</h2></div>
+<div class="alert-box"><div class="alert-ico">🚫</div><div class="alert-txt">Não usar conta pessoal para anúncios — sempre Business Manager</div></div>
+<div class="alert-box"><div class="alert-ico">🎯</div><div class="alert-txt">Criativo é o principal fator de resultado — mais importante que segmentação</div></div>
+<div class="alert-box"><div class="alert-ico">⚡</div><div class="alert-txt">Não travar por perfeccionismo — feito é melhor que perfeito</div></div>
+<div class="alert-box"><div class="alert-ico">📊</div><div class="alert-txt">Primeiro validar, depois otimizar — Rodar → Analisar → Otimizar</div></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: ANÁLISE (na frente — editável)    -->
+<!-- ═══════════════════════════════════════ -->
+<div class="tab-content" id="tab-analise">
+<div class="sec"><div class="sec-head"><div class="sec-ico">📊</div><h2>Análise de Resultados</h2></div>
+<div class="callout gold"><div class="callout-ico">📈</div><div class="callout-txt"><strong>Preencha os dados aqui!</strong> Após ativar as campanhas, registre os números abaixo. Eles aparecem aqui na frente para facilitar o acompanhamento. Ciclo: <strong>Rodar → Analisar → Otimizar</strong></div></div>
+
+<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 14px">Métricas da Campanha (preencha aqui)</h3>
+<div class="grid3">
+<div class="met-card"><div class="met-label">Leads Gerados</div><input class="edit-field" type="text" placeholder="Ex: 32" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+<div class="met-card"><div class="met-label"><span class="term">Custo por Lead<span class="tip">Quanto custou cada conversa no WhatsApp. Divide investimento por leads.</span></span></div><input class="edit-field" type="text" placeholder="Ex: R$ 25" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+<div class="met-card"><div class="met-label">Investimento Total</div><input class="edit-field" type="text" placeholder="Ex: R$ 800" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+</div>
+<div class="grid3" style="margin-top:4px">
+<div class="met-card"><div class="met-label">Mensagens Recebidas</div><input class="edit-field" type="text" placeholder="Ex: 45" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+<div class="met-card"><div class="met-label">Propostas Enviadas</div><input class="edit-field" type="text" placeholder="Ex: 15" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+<div class="met-card"><div class="met-label">Contratos Fechados</div><input class="edit-field" type="text" placeholder="Ex: 3" style="text-align:center;font-size:20px;font-weight:700;color:var(--petrol)"></div>
+</div>
+
+<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 14px">Checklist de Análise</h3>
+<div class="check-counter" data-phase="analise">0/4 concluídos</div>
+<ul class="checklist" data-phase="analise">
+<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Avaliou custo por lead</div><div class="check-sublabel">Está dentro da meta de R$ 20-35?</div></div></li>
+<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Identificou melhor criativo</div><div class="check-sublabel">Qual gerou mais leads / vendas?</div></div></li>
+<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Identificou pior criativo</div><div class="check-sublabel">Qual tem CTR mais baixo / CPL mais alto?</div></div></li>
+<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Avaliou volume de mensagens</div><div class="check-sublabel">Está conseguindo responder a tempo?</div></div></li>
+</ul>
+
+<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:24px 0 14px">Insights (preencha após cada semana)</h3>
+<div style="margin-bottom:14px"><div class="edit-label">O que funcionou</div><textarea class="edit-field" rows="3" placeholder="Ex: Criativo do Hospital São Lucas teve o menor CPL..."></textarea></div>
+<div style="margin-bottom:14px"><div class="edit-label">O que não funcionou</div><textarea class="edit-field" rows="3" placeholder="Ex: Criativo de engajamento não gerou leads diretos..."></textarea></div>
+<div style="margin-bottom:14px"><div class="edit-label">Hipóteses para testar</div><textarea class="edit-field" rows="3" placeholder="Ex: Testar vídeo curto com depoimento pode aumentar CTR..."></textarea></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: FASE 1 — FUNDAMENTOS              -->
+<!-- ═══════════════════════════════════════ -->
 <div class="tab-content" id="tab-fase1">
 <div class="sec"><div class="sec-head"><div class="sec-ico">✅</div><h2>Fase 1 — Fundamentos</h2></div>
 <div class="callout ok"><div class="callout-ico">🎉</div><div class="callout-txt"><strong>Fase concluída!</strong> Diagnóstico realizado, público definido, estratégia validada.</div></div>
@@ -263,14 +381,27 @@ html{scroll-behavior:smooth}
 <li class="check-item checked" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Definir criativo como driver principal</div><div class="check-sublabel">Call 02 — CBO, A/B, métrica = vendas</div></div></li>
 </ul></div></div>
 
-<!-- TAB FASE 2 -->
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: FASE 2 — ESTRUTURA + GERENCIADOR  -->
+<!-- ═══════════════════════════════════════ -->
 <div class="tab-content" id="tab-fase2">
 <div class="sec"><div class="sec-head"><div class="sec-ico">🔧</div><h2>Fase 2 — Estrutura e Posicionamento</h2></div>
-<div class="callout gold"><div class="callout-ico">📍</div><div class="callout-txt"><strong>Você está aqui.</strong> Foco: preparar tudo antes de subir as campanhas — perfil, criativos, WhatsApp, conta de anúncios.</div></div>
+<div class="callout ok"><div class="callout-ico">✅</div><div class="callout-txt"><strong>Fase concluída!</strong> Posicionamento ajustado, criativos produzidos, Gerenciador de Anúncios configurado. Pronta para subir a 1ª campanha.</div></div>
 <div class="grid2">
-<div class="dcard done"><div class="dcard-title">✅ Já feito</div><ul><li>Análise do perfil com direcionamento empresarial</li><li>Bio e destaques definidos</li><li>10 posts de autoridade planejados</li><li>3 posts fixados estruturados</li><li>Criativos profissionais em produção (Amil, Supermed)</li><li>Vídeos de apresentação gravados</li></ul></div>
-<div class="dcard gap"><div class="dcard-title">🚨 Falta fazer</div><ul><li>Recuperar acesso ao Facebook antigo</li><li>Criar conta reserva de contingência</li><li>Configurar Gerenciador de Anúncios</li><li>Finalizar criativos para campanha</li><li>Configurar WhatsApp Business</li><li>Publicar posts fixados</li></ul></div>
-</div></div>
+<div class="dcard done"><div class="dcard-title">✅ Já feito</div><ul><li>Análise do perfil com direcionamento empresarial</li><li>Bio e destaques definidos</li><li>10 posts de autoridade planejados</li><li>3 posts fixados estruturados</li><li>Criativos profissionais em produção (Amil, Supermed)</li><li>Vídeos de apresentação gravados</li><li>Gerenciador de Anúncios configurado</li><li>Forma de pagamento validada</li></ul></div>
+<div class="dcard gap"><div class="dcard-title">🚨 Pendente para campanha</div><ul><li>Finalizar upload dos criativos no Gerenciador</li><li>Publicar campanha (objetivo: Mensagens)</li><li>Configurar mensagem pré-preenchida no WhatsApp</li><li>Publicar os 3 posts fixados no Instagram</li></ul></div>
+</div>
+
+<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 14px">🚀 Execução — Campanhas a Subir</h3>
+<div class="camp-box hl"><div class="camp-head"><div class="camp-badge t2">1ª Campanha — Principal</div><div class="camp-title">Vendas — WhatsApp</div></div>
+<div class="grid3"><div class="camp-detail"><div class="cd-label">Objetivo</div><div class="cd-val">Mensagens</div></div><div class="camp-detail"><div class="cd-label">Otimização</div><div class="cd-val"><span class="term">CBO<span class="tip">Orçamento na campanha, Meta distribui sozinho para o melhor conjunto.</span></span></div></div><div class="camp-detail"><div class="cd-label">Orçamento</div><div class="cd-val">R$ 30/dia</div></div></div>
+<p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold-dark);margin:14px 0 8px">3 Conjuntos por Região</p>
+<div class="adset"><div class="adset-n">1</div><div style="font-weight:600;color:var(--petrol)">Niterói</div><div style="color:var(--text2)">24-43 anos</div></div>
+<div class="adset"><div class="adset-n">2</div><div style="font-weight:600;color:var(--petrol)">Barra + Zona Oeste</div><div style="color:var(--text2)">24-43 anos</div></div>
+<div class="adset"><div class="adset-n">3</div><div style="font-weight:600;color:var(--petrol)">Zona Sul + Centro</div><div style="color:var(--text2)">24-43 anos</div></div>
+</div>
+
+</div>
 <div class="sec"><div class="sec-head"><div class="sec-ico">☑️</div><h2>Checklist da Fase 2</h2></div>
 <div class="check-counter" data-phase="fase2">0/10 concluídos</div>
 <ul class="checklist" data-phase="fase2">
@@ -286,12 +417,16 @@ html{scroll-behavior:smooth}
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Validar tudo com consultor</div></div></li>
 </ul></div></div>
 
-<!-- TAB FASE 3 -->
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: FASE 3 — CAMPANHAS                -->
+<!-- ═══════════════════════════════════════ -->
 <div class="tab-content" id="tab-fase3">
 <div class="sec"><div class="sec-head"><div class="sec-ico">🚀</div><h2>Fase 3 — Campanhas</h2></div>
 <div class="callout gold"><div class="callout-ico">🎯</div><div class="callout-txt"><strong>Oferta central:</strong> "Diagnóstico gratuito do plano de saúde da sua empresa" — a isca para o WhatsApp.</div></div>
 <div style="display:flex;align-items:center;gap:0;margin:16px 0"><div style="flex:1;text-align:center;padding:16px 8px;background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--r) 0 0 var(--r)"><div style="font-size:20px">📢</div><div style="font-size:10px;font-weight:700;color:var(--petrol)">ANÚNCIO</div></div><div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:10px solid var(--gold);flex-shrink:0;margin:0 -1px;z-index:1;opacity:.7"></div><div style="flex:1;text-align:center;padding:16px 8px;background:var(--bg-soft);border:1px solid var(--border)"><div style="font-size:20px">📱</div><div style="font-size:10px;font-weight:700;color:var(--petrol)">WHATSAPP</div></div><div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:10px solid var(--gold);flex-shrink:0;margin:0 -1px;z-index:1;opacity:.7"></div><div style="flex:1;text-align:center;padding:16px 8px;background:var(--bg-soft);border:1px solid var(--border)"><div style="font-size:20px">🎯</div><div style="font-size:10px;font-weight:700;color:var(--petrol)">QUALIFICAÇÃO</div></div><div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:10px solid var(--gold);flex-shrink:0;margin:0 -1px;z-index:1;opacity:.7"></div><div style="flex:1;text-align:center;padding:16px 8px;background:var(--bg-soft);border:1px solid var(--border)"><div style="font-size:20px">💰</div><div style="font-size:10px;font-weight:700;color:var(--petrol)">COTAÇÃO</div></div><div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:10px solid var(--gold);flex-shrink:0;margin:0 -1px;z-index:1;opacity:.7"></div><div style="flex:1;text-align:center;padding:16px 8px;background:var(--bg-soft);border:1px solid var(--border);border-radius:0 var(--r) var(--r) 0"><div style="font-size:20px">🏆</div><div style="font-size:10px;font-weight:700;color:var(--petrol)">FECHAMENTO</div></div></div>
 <div class="callout warn"><div class="callout-ico">⚡</div><div class="callout-txt"><strong>Regra de ouro:</strong> Lead esfria em minutos. Responda em até 5 min. Após 30 min a conversão cai pela metade.</div></div>
+
+<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 14px">🚀 Campanhas a Executar</h3>
 
 <div class="camp-box"><div class="camp-head"><div class="camp-badge t1">Teste 1</div><div class="camp-title">Engajamento</div></div>
 <div class="grid3"><div class="camp-detail"><div class="cd-label">Objetivo</div><div class="cd-val">Engajamento</div><div class="cd-sub">Aquecer e validar criativos</div></div><div class="camp-detail"><div class="cd-label">Otimização</div><div class="cd-val"><span class="term">CBO<span class="tip">Orçamento na campanha, Meta distribui sozinho para o melhor conjunto.</span></span></div><div class="cd-sub">Orçamento na campanha</div></div><div class="camp-detail"><div class="cd-label">Orçamento</div><div class="cd-val">R$ 15/dia</div><div class="cd-sub">~R$ 450/mês</div></div></div>
@@ -307,11 +442,11 @@ html{scroll-behavior:smooth}
 <div class="callout ok"><div class="callout-ico">🏆</div><div class="callout-txt"><strong>Por que CBO por região?</strong> Distribui orçamento para o melhor conjunto. Com regiões separadas, você sabe onde vende mais.</div></div></div>
 
 <div class="camp-box"><p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold-dark);margin-bottom:12px">📋 Plano de Testes A/B</p>
-<div class="grid3"><div class="camp-detail"><div class="cd-label">Validação</div><div class="cd-val">Dias 1-5</div><div class="cd-sub">Rodar tudo. Não pausar. Coletar dados.</div></div><div class="camp-detail"><div class="cd-label">Otimização</div><div class="cd-val">Dias 6-10</div><div class="cd-sub">Pausar CTR &lt;1%. Manter 2-3 melhores.</div></div><div class="camp-detail"><div class="cd-label">Escala</div><div class="cd-val">Dia 11+</div><div class="cd-sub">Escalar vencedor. Novos criativos.</div></div></div></div>
+<div class="grid3"><div class="camp-detail"><div class="cd-label">Validação</div><div class="cd-val">Dias 1-5</div><div class="cd-sub">Rodar tudo. Não pausar. Coletar dados.</div></div><div class="camp-detail"><div class="cd-label">Otimização</div><div class="cd-val">Dias 6-10</div><div class="cd-sub">Pausar CTR &lt;1%. Manter 2-3 melhores.</div></div><div class="camp-detail"><div class="cd-label">Ajuste</div><div class="cd-val">Dia 11+</div><div class="cd-sub">Ajustar vencedor. Novos criativos.</div></div></div></div>
 
 <h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 12px">💬 Script WhatsApp</h3>
 <div class="script-box">
-<div class="script-step"><div class="script-time">Automática</div><div><div class="script-lbl">Mensagem automática</div><div class="script-msg">Olá! 👋 Sou a Adri, especialista em plano de saúde empresarial. Vou te atender em instantes. Enquanto isso: você já tem plano empresarial ou está buscando o primeiro?</div></div></div>
+<div class="script-step"><div class="script-time">Automática</div><div><div class="script-lbl">Mensagem automática</div><div class="script-msg">Olá! Sou a Adri, especialista em plano de saúde empresarial. Vou te atender em instantes. Enquanto isso: você já tem plano empresarial ou está buscando o primeiro?</div></div></div>
 <div class="script-step"><div class="script-time">0-5 min</div><div><div class="script-lbl">Resposta pessoal</div><div class="script-msg">Oi, [nome]! Que bom que se interessou. Me conta: a sua empresa tem quantos colaboradores hoje?</div></div></div>
 <div class="script-step"><div class="script-time">Qualificação</div><div><div class="script-lbl">Perguntas de filtro</div><div class="script-msg">1. Quantos colaboradores?<br>2. Já tem plano ou busca o primeiro?<br>3. Qual operadora atual?<br>4. Quer reduzir custo, melhorar cobertura ou contratar do zero?<br>5. Região da empresa?</div></div></div>
 <div class="script-step"><div class="script-time">Oferta</div><div><div class="script-lbl">Análise gratuita</div><div class="script-msg">Perfeito! Vou comparar Amil, Bradesco e SulAmérica e te mostrar a melhor opção. Posso enviar a análise até [dia]?</div></div></div>
@@ -330,13 +465,15 @@ html{scroll-behavior:smooth}
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Analisar primeiros resultados</div></div></li>
 </ul></div></div>
 
-<!-- TAB FASE 4 -->
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: FASE 4 — OTIMIZAÇÃO               -->
+<!-- ═══════════════════════════════════════ -->
 <div class="tab-content" id="tab-fase4">
 <div class="sec"><div class="sec-head"><div class="sec-ico">📊</div><h2>Fase 4 — Otimização</h2></div>
-<div class="callout info"><div class="callout-ico">🎯</div><div class="callout-txt"><strong>Foco:</strong> Ler números, entender o que funciona, otimizar. Pausar o fraco, escalar o que vende.</div></div>
+<div class="callout info"><div class="callout-ico">🎯</div><div class="callout-txt"><strong>Foco:</strong> Ler números, entender o que funciona, otimizar. Pausar o fraco, manter o que vende.</div></div>
 <div class="grid2">
 <div class="dcard lvl"><div class="dcard-title">📚 Aprendizado</div><ul><li>Leitura de métricas (CPC, CTR, CPL)</li><li>Identificar criativos vencedores (qual gera venda)</li><li>Otimização de públicos por região</li><li>Testes A/B de ganchos</li></ul></div>
-<div class="dcard warn"><div class="dcard-title">⚡ Execução</div><ul><li>Analisar resultados 5-10 dias</li><li>Pausar criativos CTR &lt;1%</li><li>Escalar 2-3 vencedores</li><li>Ajustar segmentação por região</li><li>Marcar qual anúncio trouxe cada venda</li></ul></div>
+<div class="dcard warn"><div class="dcard-title">⚡ Execução</div><ul><li>Analisar resultados 5-10 dias</li><li>Pausar criativos CTR &lt;1%</li><li>Manter 2-3 melhores criativos</li><li>Ajustar segmentação por região</li><li>Marcar qual anúncio trouxe cada venda</li></ul></div>
 </div></div>
 <div class="sec"><div class="sec-head"><div class="sec-ico">☑️</div><h2>Checklist da Fase 4</h2></div>
 <div class="check-counter" data-phase="fase4">0/7 concluídos</div>
@@ -344,98 +481,11 @@ html{scroll-behavior:smooth}
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Analisar métricas dos primeiros 7 dias</div></div></li>
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Identificar criativos com melhor performance</div></div></li>
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Pausar criativos fracos</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Escalar criativos vencedores</div></div></li>
+<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Criar variações dos melhores criativos</div></div></li>
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Registrar qual anúncio trouxe cada venda</div></div></li>
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Testar novos ganchos</div></div></li>
 <li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Refinar script com base nos leads reais</div></div></li>
 </ul></div></div>
 
-<!-- TAB FASE 5 -->
-<div class="tab-content" id="tab-fase5">
-<div class="sec"><div class="sec-head"><div class="sec-ico">📈</div><h2>Fase 5 — Escala</h2></div>
-<div class="callout ok"><div class="callout-ico">🚀</div><div class="callout-txt"><strong>Objetivo final:</strong> Autonomia total para gerenciar campanhas e manter o fluxo de leads.</div></div>
-<div class="grid2">
-<div class="dcard lvl"><div class="dcard-title">📚 Aprendizado</div><ul><li>Escala horizontal e vertical</li><li>Remarketing</li><li>Lookalike</li><li>Automação e CRM</li></ul></div>
-<div class="dcard warn"><div class="dcard-title">⚡ Execução</div><ul><li>Aumentar investimento gradualmente</li><li>Campanhas de remarketing</li><li>Público Lookalike</li><li>CRM simples</li><li>Documentar processo</li></ul></div>
-</div>
-<h3 style="font-family:'Playfair Display',serif;font-size:17px;color:var(--petrol);margin:20px 0 12px">💰 Projeção de ROI</h3>
-<div class="callout gold"><div class="callout-ico">📊</div><div class="callout-txt"><strong>Base:</strong> R$ 1.000/mês · Comissão ~R$ 2.880 por plano empresarial.</div></div>
-<div class="grid3">
-<div class="roi-card pess"><div class="roi-sc">🔴 Pessimista</div><div class="roi-row"><span class="roi-lbl">CPL</span><span class="roi-val">R$ 40</span></div><div class="roi-row"><span class="roi-lbl">Leads</span><span class="roi-val">25</span></div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">8%</span></div><div class="roi-row"><span class="roi-lbl">Vendas</span><span class="roi-val">2/mês</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">ROI</div><div class="roi-amt">+476%</div></div></div>
-<div class="roi-card real"><div class="roi-sc">🟡 Realista</div><div class="roi-row"><span class="roi-lbl">CPL</span><span class="roi-val">R$ 25</span></div><div class="roi-row"><span class="roi-lbl">Leads</span><span class="roi-val">40</span></div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">12%</span></div><div class="roi-row"><span class="roi-lbl">Vendas</span><span class="roi-val">5/mês</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">ROI</div><div class="roi-amt">+1.340%</div></div></div>
-<div class="roi-card opt"><div class="roi-sc">🟢 Otimista</div><div class="roi-row"><span class="roi-lbl">CPL</span><span class="roi-val">R$ 18</span></div><div class="roi-row"><span class="roi-lbl">Leads</span><span class="roi-val">55</span></div><div class="roi-row"><span class="roi-lbl">Conversão</span><span class="roi-val">15%</span></div><div class="roi-row"><span class="roi-lbl">Vendas</span><span class="roi-val">8/mês</span></div><div class="roi-total"><div style="font-size:10px;color:var(--text3);text-transform:uppercase;margin-bottom:4px">ROI</div><div class="roi-amt">+2.204%</div></div></div>
-</div></div>
-<div class="sec" style="margin-top:20px"><div class="sec-head"><div class="sec-ico">☑️</div><h2>Checklist da Fase 5</h2></div>
-<div class="check-counter" data-phase="fase5">0/7 concluídos</div>
-<ul class="checklist" data-phase="fase5">
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Aumentar investimento gradualmente</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Criar campanha de remarketing</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Criar público Lookalike</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Implementar CRM</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Documentar processo</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Atingir 10+ planos/mês</div></div></li>
-<li class="check-item" onclick="toggleCheck(this)"><div class="check-box">✓</div><div><div class="check-label">Autonomia total na plataforma</div></div></li>
-</ul></div></div>
-
-<!-- TAB ESTRATÉGIA -->
-<div class="tab-content" id="tab-estrategia">
-<div class="sec"><div class="sec-head"><div class="sec-ico">💡</div><h2>Dores e Desejos do Público</h2></div>
-<div class="grid2">
-<div class="pd-card pain"><h3>Principais Dores</h3><ul><li><strong>Custo crescente:</strong> Reajustes de até 30%</li><li><strong>Sem orientação:</strong> Não comparam operadoras</li><li><strong>Burocracia:</strong> Processos complexos</li><li><strong>Rede inadequada:</strong> Hospital que precisa não cobre</li><li><strong>Medo de trocar:</strong> Perder carências</li><li><strong>Equipe insatisfeita:</strong> Reclamação e rotatividade</li></ul></div>
-<div class="pd-card desire"><h3>Principais Desejos</h3><ul><li><strong>Economia real:</strong> Reduzir custo sem perder qualidade</li><li><strong>Decisão segura:</strong> Especialista para indicar</li><li><strong>Hospital específico:</strong> Acesso ao que desejam</li><li><strong>Simplicidade:</strong> Alguém resolve a burocracia</li><li><strong>Benefício competitivo:</strong> Reter talentos</li><li><strong>Suporte contínuo:</strong> Consultoria permanente</li></ul></div>
-</div></div>
-<div class="sec"><div class="sec-head"><div class="sec-ico">📈</div><h2>Pesquisa de Mercado</h2></div>
-<div class="grid2">
-<div class="res-card"><h4>🔎 O que atrai empresários</h4><ul><li>Redução real de custos</li><li>Comparação imparcial entre operadoras</li><li>PMEs podem ter plano empresarial</li><li>Hospital específico como âncora</li><li>Diagnóstico gratuito</li></ul></div>
-<div class="res-card"><h4>📱 Anúncios que performam</h4><ul><li>Vídeos 15-30s com gancho de curiosidade</li><li>Criativos com hospital da região</li><li>Formato pergunta → resposta</li><li>Tabela de preços como âncora</li><li>"80% das empresas pagam mais caro"</li></ul></div>
-</div></div>
-<div class="sec"><div class="sec-head"><div class="sec-ico">🎨</div><h2>Criativos — Sugestões para Análise</h2></div>
-<div class="callout info"><div class="callout-ico">📝</div><div class="callout-txt"><strong>Nota:</strong> Sugestões de copy para guiar a produção. A Adri já produziu alguns criativos profissionais (Amil, Supermed, hospitais). Estes textos servem como referência para os próximos.</div></div>
-<div class="cre-block dor"><div class="cre-head"><div class="cre-dot"></div><h3>Criativos de Dor</h3></div>
-<div class="cre-item"><div class="cre-tag">💡 01 — Reajuste</div><h4>"O plano da sua empresa subiu de novo?"</h4><div class="copy-txt">Se aumentou mais de 20%, você está pagando mais do que deveria. Sou a Adri, especialista há +13 anos. Já ajudei empresas a reduzirem até 28%. Me chama no WhatsApp para análise gratuita. 👇</div></div>
-<div class="cre-item"><div class="cre-tag">💡 02 — Erros</div><h4>"3 erros ao contratar plano empresarial"</h4><div class="copy-txt">1. Escolher só pelo preço. 2. Ignorar rede hospitalar. 3. Não revisar antes do reajuste. Trabalho com Amil, Bradesco e SulAmérica. Fale comigo no WhatsApp. 📊</div></div>
-<div class="cre-item"><div class="cre-tag">💡 03 — Equipe</div><h4>"Funcionários insatisfeitos com o plano?"</h4><div class="copy-txt">Plano ruim gera reclamação e rotatividade. Troque sem perder carência, mantenha bons hospitais e economize. +13 anos no mercado. WhatsApp 👇</div></div></div>
-<div class="cre-block ben"><div class="cre-head"><div class="cre-dot"></div><h3>Criativos de Benefício</h3></div>
-<div class="cre-item"><div class="cre-tag">💡 01 — Economia</div><h4>"Economize até 28% no plano de saúde"</h4><div class="copy-txt">Com CNPJ e 3+ colaboradores, você tem condições que pessoa física não consegue. Análise gratuita pelo WhatsApp. 👇</div></div>
-<div class="cre-item"><div class="cre-tag">💡 02 — Hospital</div><h4>"Acesso ao Hospital [Nome] com melhor custo"</h4><div class="copy-txt">Plano empresarial dá acesso aos melhores hospitais do RJ por muito menos. Comparo todas as opções. WhatsApp 💬</div></div>
-<div class="cre-item"><div class="cre-tag">💡 03 — Retenção</div><h4>"Plano de saúde: benefício que retém talentos"</h4><div class="copy-txt">Reduz rotatividade em até 40%. Trabalho com Amil, Bradesco e SulAmérica. Descubra a melhor opção. 👇</div></div></div>
-<div class="cre-block eng"><div class="cre-head"><div class="cre-dot"></div><h3>Criativos de Engajamento</h3></div>
-<div class="cre-item"><div class="cre-tag">💡 01 — Enquete</div><h4>"Sabe quanto paga a mais no plano?"</h4><div class="copy-txt">Revisou contrato no último ano? Sabe o reajuste? Já comparou? Se respondeu "não", pode estar pagando mais. Comenta "QUERO". 👇</div></div>
-<div class="cre-item"><div class="cre-tag">💡 02 — Comparativo</div><h4>"Amil vs Bradesco: qual o melhor?"</h4><div class="copy-txt">Depende da região, rede e orçamento. Análise personalizada no WhatsApp. 📊</div></div>
-<div class="cre-item"><div class="cre-tag">💡 03 — Quiz</div><h4>"O plano da empresa está adequado?"</h4><div class="copy-txt">✅ Cobre os hospitais? ✅ Sabe o reajuste? ✅ Equipe satisfeita? Menos de 3? Me chama no WhatsApp. 🤝</div></div></div>
-</div>
-<div class="sec"><div class="sec-head"><div class="sec-ico">📖</div><h2>Glossário</h2></div>
-<div class="grid2">
-<div class="dcard lvl"><div class="dcard-title" style="color:var(--petrol)">Métricas</div><ul><li><strong>CPC</strong> — Custo por Clique</li><li><strong>CTR</strong> — Taxa de Cliques (%)</li><li><strong>CPM</strong> — Custo por Mil Impressões</li><li><strong>CPL</strong> — Custo por Lead</li><li><strong>ROI</strong> — Retorno sobre Investimento</li></ul></div>
-<div class="dcard lvl"><div class="dcard-title" style="color:var(--petrol)">Campanha</div><ul><li><strong>CBO</strong> — Orçamento otimizado na campanha</li><li><strong>Conjunto</strong> — Define público e região</li><li><strong>Criativo</strong> — Imagem/vídeo + texto</li><li><strong>Pixel</strong> — Código de rastreamento</li><li><strong>Teste A/B</strong> — Comparar 2 versões</li></ul></div>
-<div class="dcard lvl"><div class="dcard-title" style="color:var(--petrol)">Público</div><ul><li><strong>Broad</strong> — Público aberto</li><li><strong>Lookalike</strong> — Semelhante aos clientes</li><li><strong>Remarketing</strong> — Para quem já interagiu</li><li><strong>Lead</strong> — Quem iniciou contato</li></ul></div>
-<div class="dcard lvl"><div class="dcard-title" style="color:var(--petrol)">Estratégia</div><ul><li><strong>Funil</strong> — Caminho até a compra</li><li><strong>Conversão</strong> — Ação desejada realizada</li><li><strong>Follow-up</strong> — Retorno para quem não respondeu</li><li><strong>CRM</strong> — Sistema de contatos</li><li><strong>Escalar</strong> — Aumentar o que funciona</li></ul></div>
-</div></div></div>
-
-<!-- TAB PLANILHA -->
-<div class="tab-content" id="tab-planilha">
-<div class="sec"><div class="sec-head"><div class="sec-ico">📋</div><h2>Planilha de Acompanhamento de Leads</h2></div>
-<div class="callout gold"><div class="callout-ico">✏️</div><div class="callout-txt"><strong>Como usar:</strong> Clique em qualquer célula para editar. Selecione o status. Use "Adicionar Linha" para novos leads. <strong>Anote na coluna "Origem" qual anúncio trouxe o lead.</strong></div></div>
-<div class="sheet-wrap"><table class="sheet" id="leadSheet"><thead><tr><th>#</th><th>Data</th><th>Nome</th><th>Telefone</th><th>Empresa</th><th>Nº Vidas</th><th>Operadora</th><th>Origem</th><th>Status</th><th>Follow-up</th><th>Obs</th></tr></thead><tbody id="sheetBody">
-<tr><td>1</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td></tr>
-<tr><td>2</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td></tr>
-<tr><td>3</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td></tr>
-<tr><td>4</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td></tr>
-<tr><td>5</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td></tr>
-</tbody></table></div>
-<button class="add-row-btn" onclick="addRow()">+ Adicionar Linha</button>
-</div></div>
-
-<div class="divider"></div>
-<div class="footer"><div class="brand">Tráfego Pago <span>Master</span></div><p>Dashboard de Evolução · Adriana Gomes · Abril 2026</p></div>
-</div>
-
-<script>
-function switchTab(id,btn){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
-function toggleCheck(el){el.classList.toggle('checked');var list=el.closest('.checklist');if(list){var phase=list.dataset.phase;updateCounter(phase)}}
-function updateCounter(phase){var list=document.querySelector('.checklist[data-phase="'+phase+'"]');if(!list)return;var t=list.querySelectorAll('.check-item').length;var c=list.querySelectorAll('.check-item.checked').length;var counter=document.querySelector('.check-counter[data-phase="'+phase+'"]');if(counter)counter.textContent=c+'/'+t+' concluídos'}
-document.addEventListener('DOMContentLoaded',function(){['fase1','fase2','fase3','fase4','fase5'].forEach(updateCounter)});
-var rowCount=5;
-function addRow(){rowCount++;var tbody=document.getElementById('sheetBody');var tr=document.createElement('tr');tr.innerHTML='<td>'+rowCount+'</td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td contenteditable></td><td><select onchange="styleStatus(this)"><option value="">—</option><option value="novo">Novo</option><option value="qual">Qualificado</option><option value="prop">Proposta</option><option value="fech">Fechado</option><option value="perd">Perdido</option></select></td><td contenteditable></td><td contenteditable></td>';tbody.appendChild(tr)}
-function styleStatus(sel){sel.className='';var m={novo:'st-novo',qual:'st-qual',prop:'st-prop',fech:'st-fech',perd:'st-perd'};if(m[sel.value])sel.className=m[sel.value]}
-document.addEventListener('click',function(e){if(e.target.closest('.term')){var t=e.target.closest('.term');document.querySelectorAll('.term').forEach(function(x){if(x!==t)x.classList.remove('active')});t.classList.toggle('active')}else{document.querySelectorAl
+<!-- ═══════════════════════════════════════ -->
+<!-- TAB: 
